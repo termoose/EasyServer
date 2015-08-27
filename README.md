@@ -12,11 +12,11 @@ Add the library to your `deps` in `mix.exs`:
 # Example usage
 
 ```elixir
-cast(:function_name, state, argument) do
+cast(:push, state, element) do
     {:noreply, [element | state]}
 end
 
-call(:function_name, state, _from) do
-    {:reply, state, state}
+call(:pop, [h | t], _from) do
+    {:reply, h, t}
 end
 ```
