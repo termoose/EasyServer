@@ -8,7 +8,7 @@ defmodule EasyServer do
       end
     end
   end
-  
+
   defmacro call(function, state, from, arg \\ [], do: block) do
     quote do
       def unquote(function)(unquote(arg) \\ []) do
@@ -20,7 +20,7 @@ defmodule EasyServer do
       end
     end
   end
-  
+
   defmacro cast(function, state, arg \\ [], do: block) do
     quote do
       def unquote(function)(unquote(arg) \\ []) do
