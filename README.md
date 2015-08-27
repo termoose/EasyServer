@@ -12,6 +12,8 @@ Add the library to your `deps` in `mix.exs`:
 # Example usage
 
 ```elixir
+use EasyServer
+
 cast(:push, state, element) do
     {:noreply, [element | state]}
 end
@@ -20,3 +22,5 @@ call(:pop, [h | t], _from) do
     {:reply, h, t}
 end
 ```
+
+You can implement `handle_info` etc. as you normally would with `GenServer`.
