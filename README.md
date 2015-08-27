@@ -5,7 +5,7 @@ Tired of defining your `handle_call` or `handle_cast` functions as well as the c
 
 Add the library to your `deps` in `mix.exs`:
 
-    `{:easy_server, "~> 0.0.1"}`
+    {:easy_server, "~> 0.0.1"}
 
 # Example usage
     cast(:function_name, state, argument) do
