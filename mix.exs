@@ -8,19 +8,18 @@ defmodule EasyServer.Mixfile do
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
      deps: deps,
-		 package: [
-			 files: ["lib/easy_server.ex",
-							 "test/easy_server_test.exs",
-							 "test/test_helper.exs",
-							 "config/config.exs",
-							 "mix.exs",
-							 "README.md"],
-			 contributors: ["Ole Andre Birkedal"],
-			 licenses: ["Apache 2.0"],
-			 links: %{"Github" => "https://github.com/termoose/EasyServer"},
-			 description: "Easier GenServer for Elixir"
-			 ]
-		]
+     package: [
+       files: ["lib/easy_server.ex",
+               "test/easy_server_test.exs",
+               "test/test_helper.exs",
+               "config/config.exs",
+               "mix.exs",
+               "README.md"],
+       contributors: ["Ole Andre Birkedal"],
+       licenses: ["Apache 2.0"],
+       links: %{"Github" => "https://github.com/termoose/EasyServer"},
+       description: "Easier GenServer for Elixir"
+     ]]
   end
 
   # Configuration for the OTP application
