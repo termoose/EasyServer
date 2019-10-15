@@ -1,6 +1,8 @@
 EasyServer
 ==========
 
+**Note: Saša Jurić has a much more complete library available:** https://github.com/sasa1977/exactor
+
 Tired of defining your `handle_call` or `handle_cast` functions as well as the client functions for issuing the `GenServer.call` and `GenServer.cast`? Look no further!
 
 Add the library to your `deps` in `mix.exs`:
@@ -24,3 +26,4 @@ end
 ```
 
 You can implement `handle_info` etc. as you normally would with `GenServer`.
+Check `easy_server_test.exs` for example usage.

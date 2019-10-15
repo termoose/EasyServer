@@ -15,20 +15,24 @@ defmodule EasyServerTest do
     {:reply, state, state}
   end
 
+  def init(arg) do
+    {:ok, arg}
+  end
+
   # Tests
   test "initialize a queue" do
     EasyServerTest.start_link([1,2,3])
-    assert [1, 2, 3] == list
+    assert [1, 2, 3] == list()
   end
 
   test "push to queue" do
     EasyServerTest.start_link([])
     push("some element")
-    assert "some element" == hd(list)
+    assert "some element" == hd(list())
   end
 
   test "pop from queue" do
     EasyServerTest.start_link([1, 2, 3])
-    assert 1 == pop
+    assert 1 == pop()
   end
 end

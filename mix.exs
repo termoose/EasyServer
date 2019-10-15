@@ -7,7 +7,7 @@ defmodule EasyServer.Mixfile do
      elixir: "~> 1.0",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
-     deps: deps,
+     deps: deps(),
      package: [
        files: ["lib/easy_server.ex",
                "test/easy_server_test.exs",
